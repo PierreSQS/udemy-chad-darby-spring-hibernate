@@ -11,6 +11,7 @@
 
 	<properties>
 		<springframework.version>5.1.0.RELEASE</springframework.version>
+		<springframework.security.version>5.1.0.RELEASE</springframework.security.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,6 +26,24 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+
+		<!-- spring security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
+
 
 		<!-- Servlet support, JSP and JSTL not needed
 		     and provided by the server-->
@@ -59,7 +78,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring-chad-darby-chap389</finalName>
+		<finalName>spring-chad-darby-chap396</finalName>
 
 		<plugins>
 			<!-- Builds a Web Application Archive (WAR) file from the project output
