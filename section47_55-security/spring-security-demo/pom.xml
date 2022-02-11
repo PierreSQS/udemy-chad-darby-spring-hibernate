@@ -83,7 +83,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring-chad-darby-chap404</finalName>
+		<finalName>spring-chad-darby-chap410</finalName>
 
 		<plugins>
 			<!-- Builds a Web Application Archive (WAR) file from the project output
