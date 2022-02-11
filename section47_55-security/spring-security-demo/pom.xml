@@ -52,6 +52,11 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 		<!-- to compensate for java 9+ not including jaxb -->
 		<dependency>
@@ -78,7 +83,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring-chad-darby-chap396</finalName>
+		<finalName>spring-chad-darby-chap404</finalName>
 
 		<plugins>
 			<!-- Builds a Web Application Archive (WAR) file from the project output
