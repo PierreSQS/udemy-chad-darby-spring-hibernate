@@ -22,11 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .and()
                 .withUser(users.username("Mary")
                         .password("Mary")
-                        .roles("MANAGER"))
+                        .roles( "MANAGER", "EMPLOYEE"))
 //                .and()
                 .withUser(users.username("Susan")
                         .password("Susan")
-                        .roles("ADMIN"));
+                        .roles( "ADMIN", "EMPLOYEE"));
     }
 
     @Override

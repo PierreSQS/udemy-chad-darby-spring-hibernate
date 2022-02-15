@@ -44,9 +44,15 @@
 			<version>${springframework.security.version}</version>
 		</dependency>
 
+		<!-- For Chap420 access security jsp tag library-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${springframework.security.version}</version>
+		</dependency>
 
-		<!-- Servlet support, JSP and JSTL not needed
-		     and provided by the server-->
+
+		<!-- Servlet support, JSP and JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -83,7 +89,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>spring-chad-darby-chap416</finalName>
+		<finalName>spring-chad-darby-chap420</finalName>
 
 		<plugins>
 			<!-- Builds a Web Application Archive (WAR) file from the project output
