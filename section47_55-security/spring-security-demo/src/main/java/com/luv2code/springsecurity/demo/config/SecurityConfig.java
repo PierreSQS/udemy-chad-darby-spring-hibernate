@@ -10,29 +10,32 @@ import org.springframework.security.core.userdetails.User;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private static final String EMPLOYEE = "EMPLOYEE";
+    private static final String MANAGER = "MANAGER";
+    private static final String ADMIN = "ADMIN";
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // 5.1.0.Release implementation!!! Actual slightly different!!!!
+        // 5.1.0.Release implementation!!! Actually deprecated!!!!
         User.UserBuilder users = User.withDefaultPasswordEncoder();
 
         auth.inMemoryAuthentication()
                 .withUser(users.username("John")
                         .password("John")
-                        .roles("EMPLOYEE"))
-//                .and()
+                        .roles(EMPLOYEE))
                 .withUser(users.username("Mary")
                         .password("Mary")
-                        .roles( "MANAGER", "EMPLOYEE"))
-//                .and()
+                        .roles( MANAGER, EMPLOYEE))
                 .withUser(users.username("Susan")
                         .password("Susan")
-                        .roles( "ADMIN", "EMPLOYEE"));
+                        .roles( ADMIN, EMPLOYEE));
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                    .anyRequest().authenticated()
+                    .antMatchers("/").hasRole(EMPLOYEE)
+                    .antMatchers("/leaders/**").hasRole(MANAGER)
                 .and()
                 .formLogin()
                     .loginPage("/showLoginPage")

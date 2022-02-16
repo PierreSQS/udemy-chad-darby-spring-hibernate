@@ -49,7 +49,10 @@ class DemoControllerTest {
 
     @Test
     void showHomeAuthenticated() throws Exception {
-        mockMvc.perform(get("/").with(user("John").password("John")))
+        mockMvc.perform(get("/")
+                            .with(user("John")
+                            .password("John")
+                            .roles("EMPLOYEE")))
                 .andExpect(authenticated())
                 .andExpect(forwardedUrl("/WEB-INF/view/home.jsp"))
                 .andExpect(status().isOk())
