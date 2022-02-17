@@ -27,8 +27,14 @@
 	<hr>
 	<!-- Add a link to point to /leaders .. This is for managers -->
 	<p>
-	    <a href=${pageContext.request.contextPath}/leaders>LeaderShip Meeting</a>
+	    <a href=${pageContext.request.contextPath}/leaders>Leadership Meeting</a>
 	    (Only for Managers!)
+	</p>
+
+	<!-- Add a link to point to /systems .. This is for admins -->
+	<p>
+	    <a href=${pageContext.request.contextPath}/systems>IT Admins Meeting</a>
+	    (Only for Admins!)
 	</p>
 
 	<!-- Logout Form -->

@@ -15,4 +15,9 @@ public class DemoController {
     public String showLeadersMeeting() {
         return "leaders";
     }
+
+    @GetMapping("/systems")
+    public String showAdminsMeeting() {
+        return "systems";
+    }
 }
